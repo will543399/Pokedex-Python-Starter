@@ -15,18 +15,35 @@ print(data[0])
 
 
 #Based on user input, show all moves that a pokemon could learn based on their type. For example, if Charizard is fire/fyling, show all fire and flying moves. HINT import the moves.json file too!
+languages = {
+        "1":"English",
+        "2":"Chinese",
+        "3":"Japnese",
+        "4":"French"
+    }
 
-def languages():
-    y=input("What language?, 语言?,言語?,click anything to continue,click X to leave")
-    print("English")
-    print("Chinese")
-    print("Japanese")
-    print("French")
-    language_choice=input("Enter Character").strip()
+#def showitems():
+#    language_item=input("Enter Character").strip()
+#    language=languages.get(language_)
+#    if not language:
+#        print("invalid")
+
+def pokedexx():
+    y=input("click anything to continue,click X to leave")
     for i in range(1):
         if y==("x").lower():
             print("have a good day")
             break
+    language_choice=input("Enter Character").strip()
+    language=languages.get(language_choice)
+    if not language:
+        print("invalid")
+    else:
+
+        while True:
+            if y==("x").lower():
+                print("have a good day")
+                break
 
     languages = {
         "1":"english",
@@ -34,10 +51,26 @@ def languages():
         "3":"Japnese",
         "4":"French"
     }
-    language=languages.get(language_choice)
+    matches=[]
 
     print(f' Using {language}')
-languages()
+    for pokemon in data:
+        if not isinstance(pokemon,dict):
+            continue
+        names=pokemon.get("name",{})
+        if language_choice==1:
+            name=names.get("English"," ")
+        elif language_choice==2:
+            name=names.get("Chinese"," ")
+        elif language_choice==3:
+            name=names.get("Japanese"," ")
+        elif language_choice==4:
+            name=names.get("French"," ")
+        else:
+            continue
+        
+pokedexx()
+
 
     
 
