@@ -16,10 +16,10 @@ print(data[0])
 
 #Based on user input, show all moves that a pokemon could learn based on their type. For example, if Charizard is fire/fyling, show all fire and flying moves. HINT import the moves.json file too!
 languages = {
-        "1":"English",
-        "2":"Chinese",
-        "3":"Japnese",
-        "4":"French"
+        "1":"english",
+        "2":"chinese",
+        "3":"japnese",
+        "4":"french"
     }
 
 #def showitems():
@@ -29,28 +29,18 @@ languages = {
 #        print("invalid")
 
 def pokedexx():
-    y=input("click anything to continue,click X to leave")
-    for i in range(1):
-        if y==("x").lower():
-            print("have a good day")
-            break
-    language_choice=input("Enter Character").strip()
-    language=languages.get(language_choice)
-    if not language:
+    language_choice=(input("Enter a language,1)English, 2)Chinese,3)Japanese, or 4)French").strip())
+    language_choice.lower
+    language=languages.get((language_choice).lower())
+    if not languages:
         print("invalid")
     else:
-
-        while True:
-            if y==("x").lower():
-                print("have a good day")
-                break
-
-    languages = {
-        "1":"english",
-        "2":"chinese",
-        "3":"Japnese",
-        "4":"French"
-    }
+        print(language_choice)
+    for pokemon in data:
+        name=input("character name")
+        
+        print(pokemon["name"][language_choice])
+        
     matches=[]
 
     print(f' Using {language}')
