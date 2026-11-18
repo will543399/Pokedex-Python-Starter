@@ -29,34 +29,27 @@ languages = {
 #        print("invalid")
 
 def pokedexx():
-choice = input("Enter a language: 1) English, 2) Chinese, 3) Japanese, or 4) French: ").strip().lower()
-    language=languages.get((language_choice).lower())
-    if not languages:
-        print("invalid")
-    else:
-        print(language_choice)
-    for pokemon in data:
-        name=input("character name")
-        
-        print(pokemon["name"][language_choice])
-        
-    matches=[]
+        language_choice = input("Enter a language: 1) English, 2) Chinese, 3) Japanese, or 4) French: ").strip().lower()
+            language=languages.get((language_choice).lower())
+            if language_choice in languages:
+                lang=languages[language_choice]
+                print(language_choice)
+            elif language_choice in languages.value():
+                    lang=langauge_choice
+                    print(language_choice)
+            else:
+                print("invalid")
+        search=input("Search your desired pokemon right now")
+        matches[]
+        length_search=len(search)
+        name=pokemon["name"][language_choice]
+        name_start=name[len(length_search)].lower
+        if name_start==length_search:
+                matches.append(name)
 
-    print(f' Using {language}')
-    for pokemon in data:
-        if not isinstance(pokemon,dict):
-            continue
-        names=pokemon.get("name",{})
-        if language_choice==1:
-            name=names.get("English"," ")
-        elif language_choice==2:
-            name=names.get("Chinese"," ")
-        elif language_choice==3:
-            name=names.get("Japanese"," ")
-        elif language_choice==4:
-            name=names.get("French"," ")
-        else:
-            continue
+            
+            
+            
         
 pokedexx()
 
