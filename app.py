@@ -29,6 +29,7 @@ languages = {
 #        print("invalid")
 
 def pokedexx():
+<<<<<<< Updated upstream
         language_choice = input("Enter a language: 1) English, 2) Chinese, 3) Japanese, or 4) French: ").strip().lower()
             language=languages.get((language_choice).lower())
             if language_choice in languages:
@@ -46,6 +47,21 @@ def pokedexx():
         name_start=name[len(length_search)].lower
         if name_start==length_search:
                 matches.append(name)
+=======
+    language_choice=(input("Enter a language,English, Chinese,Japanese, or French").strip())
+    language_choice.lower
+    language=languages.get((language_choice).lower())
+    if not languages:
+        print("invalid")
+    else:
+        print(language_choice)
+    for pokemon in data:
+        name=input("character name")
+        
+        print(pokemon["name"][language_choice])
+        
+    matches=[]
+>>>>>>> Stashed changes
 
             
             
