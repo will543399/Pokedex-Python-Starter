@@ -29,8 +29,7 @@ languages = {
 #        print("invalid")
 
 def pokedexx():
-    language_choice=(input("Enter a language,1)English, 2)Chinese,3)Japanese, or 4)French").strip())
-    language_choice.lower
+choice = input("Enter a language: 1) English, 2) Chinese, 3) Japanese, or 4) French: ").strip().lower()
     language=languages.get((language_choice).lower())
     if not languages:
         print("invalid")
