@@ -21,6 +21,11 @@ languages = {
         "3":"japnese",
         "4":"french"
     }
+def showitems():
+    for item in data:
+        pokemon=item.get['name']
+        print(pokemon)
+    
 
 #def showitems():
 #    language_item=input("Enter Character").strip()
@@ -29,39 +34,24 @@ languages = {
 #        print("invalid")
 
 def pokedexx():
-<<<<<<< Updated upstream
-        language_choice = input("Enter a language: 1) English, 2) Chinese, 3) Japanese, or 4) French: ").strip().lower()
-            language=languages.get((language_choice).lower())
-            if language_choice in languages:
-                lang=languages[language_choice]
-                print(language_choice)
-            elif language_choice in languages.value():
-                    lang=langauge_choice
-                    print(language_choice)
-            else:
-                print("invalid")
-        search=input("Search your desired pokemon right now")
-        matches[]
-        length_search=len(search)
-        name=pokemon["name"][language_choice]
-        name_start=name[len(length_search)].lower
-        if name_start==length_search:
-                matches.append(name)
-=======
-    language_choice=(input("Enter a language,English, Chinese,Japanese, or French").strip())
-    language_choice.lower
-    language=languages.get((language_choice).lower())
-    if not languages:
-        print("invalid")
+    choice = input("Enter a language: 1) English, 2) Chinese, 3) Japanese, or 4) French: ").strip().lower()
+    language=languages.get((choice).lower())
+    if choice in languages:
+        lang=languages[choice]
+        print(choice)
+    elif choice in languages.value():
+        lang=choice
+        print(choice)
     else:
-        print(language_choice)
-    for pokemon in data:
-        name=input("character name")
-        
-        print(pokemon["name"][language_choice])
-        
+        print("invalid")
+    search=str(input("Search your desired pokemon right now").lower())
     matches=[]
->>>>>>> Stashed changes
+    length_search=len(search)
+    pokemon_data=showitems()
+    name=pokemon_data["name"](choice)
+    name_start=name[len(length_search)].lower
+    if name_start==length_search:
+        matches.append(name)
 
             
             
