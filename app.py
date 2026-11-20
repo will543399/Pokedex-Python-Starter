@@ -40,7 +40,7 @@ def pokedexx():
     if choice in languages:
         lang=languages[choice]
         print(choice)
-    elif choice in languages.value():
+    elif choice in languages.values():
         lang=choice
         print(choice)
     else:
@@ -55,19 +55,75 @@ def pokedexx():
         search4=input("Recherche un Pokémon")
         search4==search2
         search3==search4
-        
-    matches=[]
-    length_search=len(search)
-    for item in data:
-        pokemon=item['name'](search)
-        print(pokemon)
-    language=language.get(choice,"english")
-    pokemon_data=pokemon
-    name=pokemon_data["name"](choice)
-    name_start=name[len(length_search)].lower()
-    if name_start==length_search:
-        matches.append(name)
-
+    while True:
+        if choice=="1":
+            search=str(input("Search your desired pokemon right now").lower())
+        elif choice=="2":
+            search2=str(input("搜索宝可梦").lower())
+        elif choice=="3":
+            search3=str(input("ポケモンを探す").lower())
+        elif choice=="4":
+            search4=str(input("Recherche un Pokémon").lower())
+        matches=[]
+        length_search=len(search)
+        for item in data:
+            pokemon=search(item['name'])
+            print(pokemon)
+        language=language.get(choice,"english")
+        pokemon_data=pokemon
+        name=pokemon_data["name"](choice)
+        name_start=name[len(length_search)].lower()
+        if name_start==length_search:
+            matches.append(name)
+matches=[]
+'''    if choice=="1":
+        search=str(input("Search your desired pokemon right now").lower())
+        length_search=len(search)
+        for item in data:
+            pokemon=search(item['name'])
+            print(pokemon)
+        language=language.get(choice,"english")
+        pokemon_data=pokemon
+        name=pokemon_data["name"](choice)
+        name_start=name[len(length_search)].lower()
+        if name_start==length_search:
+            matches.append(name)
+        elif choice=="2":
+            search2=str(input("搜索宝可梦").lower())
+            length_search=len(search2)
+            for item in data:
+                pokemon=search(item['name'])
+                print(pokemon)
+            language=language.get(choice,"english")
+            pokemon_data=pokemon
+            name=pokemon_data["name"](choice)
+            name_start=name[len(length_search)].lower()
+            if name_start==length_search:
+                matches.append(name)
+        elif choice=="3":
+            search3=str(input("ポケモンを探す").lower())
+            length_search=len(search3)
+            for item in data:
+                pokemon=search(item['name'])
+                print(pokemon)
+            language=language.get(choice,"english")
+            pokemon_data=pokemon
+            name=pokemon_data["name"](choice)
+            name_start=name[len(length_search)].lower()
+            if name_start==length_search:
+                matches.append(name)
+        elif choice=="4":
+            search4=str(input("Recherche un Pokémon").lower())
+            length_search=len(search)
+            for item in data:
+                pokemon=search(item['name'])
+                print(pokemon)
+            language=language.get(choice,"english")
+            pokemon_data=pokemon
+            name=pokemon_data["name"](choice)
+            name_start=name[len(length_search)].lower()
+            if name_start==length_search:
+                matches.append(name)'''
 
             
             
